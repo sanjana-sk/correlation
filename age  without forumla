@@ -1,0 +1,35 @@
+import pandas as pd
+data={'Age':[15,26,10,9,15,20,18,11,8,20],'Score':[127,103,115,123,134,119,125,132,136,126]}
+df=pd.DataFrame(data)
+print("ORIGINAL DATA")
+print(df)
+correlation=df.corr(method='pearson')
+correlation1=df.corr(method='spearman')
+print("\n")
+print("CORRELATION:",correlation)
+print("\n")
+print("CORRELATION:",correlation1)
+
+
+ORIGINAL DATA
+   Age  Score
+0   15    127
+1   26    103
+2   10    115
+3    9    123
+4   15    134
+5   20    119
+6   18    125
+7   11    132
+8    8    136
+9   20    126
+
+
+('CORRELATION:',            Age    Score
+Age    1.00000 -0.59733
+Score -0.59733  1.00000)
+
+
+('CORRELATION:',             Age     Score
+Age    1.000000 -0.451228
+Score -0.451228  1.000000)
