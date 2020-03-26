@@ -1,0 +1,35 @@
+import pandas as pd
+data={'STUMPS':[2,2,1,3,4,1,5,3,1,2],'BETTLE LARVAE':[19,39,21,33,49,20,65,49,17,23]}
+df=pd.DataFrame(data)
+print("ORIGINAL DATA")
+print(df)
+correlation=df.corr(method='pearson')
+correlation1=df.corr(method='spearman')
+print("\n")
+print("CORRELATION:",correlation)
+print("\n")
+print("CORRELATION:",correlation1)
+
+
+ORIGINAL DATA
+   BETTLE LARVAE  STUMPS
+0             19       2
+1             39       2
+2             21       1
+3             33       3
+4             49       4
+5             20       1
+6             65       5
+7             49       3
+8             17       1
+9             23       2
+
+
+('CORRELATION:',                BETTLE LARVAE   STUMPS
+BETTLE LARVAE        1.00000  0.91585
+STUMPS               0.91585  1.00000)
+
+
+('CORRELATION:',                BETTLE LARVAE    STUMPS
+BETTLE LARVAE       1.000000  0.859644
+STUMPS              0.859644  1.000000)
