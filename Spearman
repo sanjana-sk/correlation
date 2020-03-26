@@ -1,0 +1,50 @@
+from sklearn.datasets import load_breast_cancer
+from scipy.stats import spearmanr
+data=load_breast_cancer()
+data1=data.data[:,2]
+data2=data.target
+corr,_=spearmanr(data1,data2)
+print ('Spearman correlation: %.3f' % corr)
+
+Spearman correlation: -0.748
+
+
+
+
+
+from sklearn.datasets import load_breast_cancer
+from scipy.stats import pearsonr
+data=load_breast_cancer()
+data1=data.data[:,2]
+data2=data.target
+corr,_=pearsonr(data1,data2)
+print ('Pearsons correlation: %.3f' % corr)
+
+Pearsons correlation: -0.743
+
+
+
+
+
+from sklearn.datasets import load_boston
+from scipy.stats import pearsonr
+data=load_boston()
+data1=data.data[:,2]
+data2=data.target
+corr,_=pearsonr(data1,data2)
+print ('Pearson correlation: %.3f' % corr)
+
+Pearson correlation: -0.484
+
+
+
+
+from sklearn.datasets import load_boston
+from scipy.stats import spearmanr
+data=load_boston()
+data1=data.data[:,2]
+data2=data.target
+corr,_=spearmanr(data1,data2)
+print ('Spearman correlation: %.3f' % corr)
+
+Spearman correlation: -0.578
