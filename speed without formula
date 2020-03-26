@@ -1,0 +1,30 @@
+import pandas as pd
+data={'MILES':[20,30,40,50,60],'SPEED':[33,37,39,37,33]}
+df=pd.DataFrame(data)
+print("ORIGINAL DATA")
+print(df)
+correlation=df.corr(method='pearson')
+correlation1=df.corr(method='spearman')
+print("\n")
+print("CORRELATION:",correlation)
+print("\n")
+print("Correlation:",correlation1)
+
+
+ORIGINAL DATA
+   MILES  SPEED
+0     20     33
+1     30     37
+2     40     39
+3     50     37
+4     60     33
+
+
+('CORRELATION:',        MILES  SPEED
+MILES    1.0    0.0
+SPEED    0.0    1.0)
+
+
+('Correlation:',        MILES  SPEED
+MILES    1.0    0.0
+SPEED    0.0    1.0)
